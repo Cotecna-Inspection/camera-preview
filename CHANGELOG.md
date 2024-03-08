@@ -1,5 +1,10 @@
 # Changelog
 
+## [6.0.0] (2024-03-08)
+
+### Added
+* Upgrade to Capacitor 6
+
 ## [5.0.0] (2023-09-13)
 
 ### Added
