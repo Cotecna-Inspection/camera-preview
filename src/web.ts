@@ -130,15 +130,19 @@ export class CameraPreviewWeb extends WebPlugin implements CameraPreviewPlugin {
       context.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
 
       let base64EncodedImage;
+      let type;
 
       if (options.quality != undefined) {
-        base64EncodedImage = canvas.toDataURL('image/jpeg', options.quality / 100.0).replace('data:image/jpeg;base64,', '');
+        type = 'image/jpeg';
+        base64EncodedImage = canvas.toDataURL(type, options.quality / 100.0).replace(`data:${type};base64,`, '');
       } else {
-        base64EncodedImage = canvas.toDataURL('image/png').replace('data:image/png;base64,', '');
+        type = 'image/png';
+        base64EncodedImage = canvas.toDataURL(type).replace(`data:${type};base64,`, '');
       }
 
       resolve({
         value: base64EncodedImage,
+        type: type,
       });
     });
   }

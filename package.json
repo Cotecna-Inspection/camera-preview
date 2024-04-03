@@ -1,6 +1,6 @@
 {
   "name": "@cotecna/camera-preview",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "description": "Camera preview",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -22,12 +22,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@capacitor/core": "6.0.0-nightly-20240307T150431.0"
+    "@capacitor/core": "6.0.0-rc.2"
   },
   "devDependencies": {
-    "@capacitor/android": "6.0.0-nightly-20240307T150431.0",
-    "@capacitor/cli": "^6.0.0-rc.0",
-    "@capacitor/ios": "6.0.0-nightly-20240307T150431.0",
+    "@capacitor/android": "6.0.0-rc.2",
+    "@capacitor/cli": "6.0.0-rc.2",
+    "@capacitor/ios": "6.0.0-rc.2",
     "@ionic/eslint-config": "^0.3.0",
     "@ionic/prettier-config": "^2.0.0",
     "@ionic/swiftlint-config": "^1.1.2",

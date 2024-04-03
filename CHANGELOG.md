@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.1.0] (2024-03-08)
+
+### Added
+* Upgrade to more a stable Capacitor 6 version.
+### Changed 
+* Methods `capture` and `captureSample` returns now a different object: `{ value: string, type: string }`
+
 ## [6.0.0] (2024-03-08)
 
 ### Added
