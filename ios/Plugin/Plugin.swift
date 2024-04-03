@@ -151,12 +151,12 @@ public class CameraPreview: CAPPlugin {
 
                 if self.storeToFile == false {
                     let imageBase64 = imageData?.base64EncodedString()
-                    call.resolve(["value": imageBase64!])
+                    call.resolve(["value": imageBase64!, "type": "image/jpeg"])
                 } else {
                     do {
                         let fileUrl=self.getTempFilePath()
                         try imageData?.write(to: fileUrl)
-                        call.resolve(["value": fileUrl.absoluteString])
+                        call.resolve(["value": fileUrl.absoluteString, "type": "image/jpeg"])
                     } catch {
                         call.reject("error writing image to file")
                     }
@@ -186,12 +186,12 @@ public class CameraPreview: CAPPlugin {
 
                 if self.storeToFile == false {
                     let imageBase64 = imageData?.base64EncodedString()
-                    call.resolve(["value": imageBase64!])
+                    call.resolve(["value": imageBase64!, "type": "image/jpeg"])
                 } else {
                     do {
                         let fileUrl = self.getTempFilePath()
                         try imageData?.write(to: fileUrl)
-                        call.resolve(["value": fileUrl.absoluteString])
+                        call.resolve(["value": fileUrl.absoluteString, "type": "image/jpeg"])
                     } catch {
                         call.reject("Error writing image to file")
                     }
@@ -258,7 +258,7 @@ public class CameraPreview: CAPPlugin {
 
                 // self.videoUrl = image
 
-                call.resolve(["value": image.absoluteString])
+                call.resolve(["value": image.absoluteString, "type" : "image/jpeg"])
             }
         }
     }

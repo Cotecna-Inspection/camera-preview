@@ -398,6 +398,7 @@ public class CameraPreview extends Plugin implements CameraActivity.CameraPrevie
     public void onPictureTaken(String originalPicture) {
         JSObject jsObject = new JSObject();
         jsObject.put("value", originalPicture);
+        jsObject.put("type", "image/jpeg");
         bridge.getSavedCall(captureCallbackId).resolve(jsObject);
     }
 
@@ -410,6 +411,7 @@ public class CameraPreview extends Plugin implements CameraActivity.CameraPrevie
     public void onSnapshotTaken(String originalPicture) {
         JSObject jsObject = new JSObject();
         jsObject.put("value", originalPicture);
+        jsObject.put("type", "image/jpeg");
         bridge.getSavedCall(snapshotCallbackId).resolve(jsObject);
     }
 

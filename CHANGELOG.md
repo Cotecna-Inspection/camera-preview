@@ -1,5 +1,10 @@
 # Changelog
 
+## [6.1.1] (2024-04-03)
+
+### Fixed 
+* The modifications of version 6.1.0 were only working on Web Part.
+
 ## [6.1.0] (2024-04-03)
 
 ### Added
