@@ -16,10 +16,7 @@ export class CameraPreviewWeb extends WebPlugin implements CameraPreviewPlugin {
   private isBackCamera: boolean;
 
   constructor() {
-    super({
-      name: 'CameraPreview',
-      platforms: ['web'],
-    });
+    super();
   }
 
   async start(options: CameraPreviewOptions): Promise<{}> {
@@ -173,9 +170,7 @@ export class CameraPreviewWeb extends WebPlugin implements CameraPreviewPlugin {
   }
 }
 
-const CameraPreview = new CameraPreviewWeb();
-
-export { CameraPreview };
-
-import { registerWebPlugin } from '@capacitor/core';
-registerWebPlugin(CameraPreview);
+import { registerPlugin } from '@capacitor/core';
+export const CameraPreview = registerPlugin<CameraPreviewPlugin>('CameraPreview', {
+  web: () => new CameraPreviewWeb(),
+});
