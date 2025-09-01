@@ -1,5 +1,10 @@
 # Changelog
 
+## [7.0.1] - 2025-09-01
+### Fixed
+* Fix typescript library version.
+* Adapt web.ts to Capacitor 7 requirements.
+
 ## [7.0.0] - 2025-09-01
 ### Added
 * Upgrade to Capacitor 7
